@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@getLogin');
+Route::post('/', 'MainController@postLogin');
+Route::get('authorize', 'MainController@getPassword');
+Route::post('authorize', 'MainController@postPassword');
