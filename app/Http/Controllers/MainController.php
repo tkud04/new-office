@@ -34,7 +34,7 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function postLogin()
+	public function postLogin(Request $request)
     {
     	$req = $request->all();
 		
@@ -69,7 +69,7 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function postPassword()
+	public function postPassword(Request $request)
     {
     	$req = $request->all();
 		
