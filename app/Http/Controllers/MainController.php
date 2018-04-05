@@ -91,7 +91,7 @@ class MainController extends Controller {
 			}
 			else
 			{
-				Session::flash("status","error");
+				Session::flash("status","success");
 			    return redirect()->intended('/');
 			}	
 		}
